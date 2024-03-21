@@ -1,12 +1,25 @@
 package com.crud.tasks.domain;
 
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.Id;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
-@Getter
-@AllArgsConstructor
-public class Task {
+import lombok.NoArgsConstructor;
 
-    private long id;
+@NoArgsConstructor
+@AllArgsConstructor
+@Getter
+@Entity(name = "tasks")
+public class Task {
+    @Id
+    @GeneratedValue
+    private Long id;
+
+    @Column(name = "name")
     private String title;
+
+    @Column(name = "description")
     private String content;
 }
