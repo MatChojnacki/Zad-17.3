@@ -20,7 +20,7 @@ public class TrelloClient {
 
     @Value("${trello.api.endpoint.prod}")
     private String trelloApiEndpoint;
-    @Value("$c37dc39676c3d0f4457e87a7e9cf1033")
+    @Value("${trello.app.key}")
     private String trelloAppKey;
     @Value("${trello.app.token}")
     private String trelloToken;
